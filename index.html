@@ -60,19 +60,12 @@
     /* ─── HEADER ─── */
     .site-header {
       background: var(--green-dark);
-      padding: 12px 20px;
+      padding: 10px 20px;
       text-align: center;
     }
-    .site-header .logo {
-      display: inline-flex; align-items: center; gap: 10px;
+    .site-header .logo img {
+      height: 36px; width: auto; display: block; margin: 0 auto;
     }
-    .logo-icon { width: 32px; height: 32px; background: var(--green-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-    .logo-icon svg { width: 16px; height: 16px; color: var(--green-dark); }
-    .logo-text {
-      color: var(--white); font-size: 15px; font-weight: 700;
-      letter-spacing: -0.3px; line-height: 1.2;
-    }
-    .logo-text span { color: var(--green-light); }
 
     /* ─── HERO ─── */
     .hero-bg-wrap {
@@ -338,10 +331,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="logo">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-      </div>
-      <div class="logo-text">Get<span>Local</span>WindowPrices<span>.com</span></div>
+      <img src="assets/img/logo.svg" alt="GetLocalWindowPrices.com" />
     </div>
   </header>
 
