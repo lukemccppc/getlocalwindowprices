@@ -267,7 +267,7 @@
     .type-label span { font-size: 11px; color: rgba(255,255,255,0.5); }
     .btn-cta {
       display: inline-flex; align-items: center; gap: 8px;
-      background: var(--green-light); color: var(--white); font-size: 17px; font-weight: 800;
+      background: var(--green-light); color: var(--green-dark); font-size: 17px; font-weight: 800;
       padding: 16px 36px; border-radius: var(--radius); cursor: pointer;
       letter-spacing: -0.3px; transition: transform 0.12s, box-shadow 0.12s; border: none;
     }
@@ -281,10 +281,6 @@
     .sign-card { background: #f8f8f7; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
     .sign-photo-wrap {
       width: 100%; height: 170px; overflow: hidden;
-      border-radius: 50% 50% 0 0 / 68% 68% 0 0;
-    }
-    @media (min-width: 520px) {
-      .sign-photo-wrap { border-radius: 50% 50% 0 0 / 40% 40% 0 0; }
     }
     .sign-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
     .sign-label { padding: 14px 14px 16px; }
@@ -566,7 +562,7 @@
       <div class="benefit-item">
         <div class="benefit-icon"><svg class="icon"><use href="#ico-dollar"/></svg></div>
         <div class="benefit-text">
-          <strong>Surprisingly Affordable</strong>
+          <strong>Very Affordable</strong>
           <span>Local quotes often beat national chains</span>
         </div>
       </div>
@@ -587,7 +583,7 @@
       <div class="benefit-item">
         <div class="benefit-icon"><svg class="icon"><use href="#ico-trend"/></svg></div>
         <div class="benefit-text">
-          <strong>Boost Home Value</strong>
+          <strong>Increase Home Value</strong>
           <span>New windows are a top ROI upgrade</span>
         </div>
       </div>
@@ -601,7 +597,7 @@
       <div class="benefit-item">
         <div class="benefit-icon"><svg class="icon"><use href="#ico-shield"/></svg></div>
         <div class="benefit-text">
-          <strong>Backed by Warranties</strong>
+          <strong>Backed by Lifetime Warranties</strong>
           <span>Top brands with lifetime guarantees</span>
         </div>
       </div>
@@ -811,11 +807,7 @@
 
   <!-- STICKY BAR -->
   <div class="sticky-bar">
-    <p>
-      Free local window quotes
-      <small>No obligation &middot; Takes 60 seconds</small>
-    </p>
-    <button class="sticky-btn" onclick="scrollToTop()">See Prices In My Area</button>
+    <button class="sticky-btn" onclick="scrollToTop()">See Prices In My Area &mdash; It&rsquo;s Free</button>
   </div>
 
   <script>
