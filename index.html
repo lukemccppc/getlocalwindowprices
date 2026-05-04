@@ -266,9 +266,9 @@
       background: rgba(218,226,204,0.07);
     }
     .type-svg-wrap svg { height: 72px; width: auto; color: #88BBD8; }
-    .type-label { padding: 10px 10px 12px; }
-    .type-label strong { display: block; font-size: 13px; font-weight: 700; color: var(--green-light); margin-bottom: 2px; }
-    .type-label span { font-size: 11px; color: rgba(255,255,255,0.5); }
+    .type-label { padding: 10px 10px 12px; text-align: center; }
+    .type-label strong { display: block; font-size: 13px; font-weight: 700; color: #88BBD8; margin-bottom: 2px; }
+    .type-label span { font-size: 11px; color: #88BBD8; opacity: 0.7; }
     .btn-cta {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--green-light); color: var(--green-dark); font-size: 17px; font-weight: 800;
@@ -549,7 +549,7 @@
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <strong>You Compare &amp; Save Money</strong>
+        <strong>You Save Money on New Windows</strong>
         <p>Review competing quotes and choose the best deal.</p>
       </div>
     </div>
@@ -848,7 +848,7 @@
       document.getElementById('zipWrap').style.display = 'none';
       const quiz = document.getElementById('quizWrap');
       quiz.classList.add('visible');
-      showStep(1);
+      goToStep(1);
       quiz.scrollIntoView({ behavior:'smooth', block:'start' });
     }
 
@@ -880,7 +880,7 @@
       document.getElementById('quizWrap').scrollIntoView({ behavior:'smooth', block:'start' });
       // Show/hide back button
       const backBtn = document.getElementById('backBtn');
-      if (n > 1 && n < 5) backBtn.classList.add('visible');
+      if (n > 1) backBtn.classList.add('visible');
       else backBtn.classList.remove('visible');
     }
 
