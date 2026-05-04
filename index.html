@@ -175,11 +175,18 @@
     .quiz-opt.selected svg.icon { color: var(--white); }
 
     /* ─── ANSWER SUMMARY ─── */
-    .answer-summary { background: var(--green-light); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 20px; }
-    .answer-summary h4 { font-size: 12px; font-weight: 700; color: var(--green-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
-    .summary-row { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--green-dark); margin-bottom: 6px; }
+    .answer-summary { background: #122342; border-radius: var(--radius); padding: 14px 16px; margin-bottom: 20px; }
+    .answer-summary h4 { font-size: 12px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+    .back-btn {
+      display: none; background: none; border: none; cursor: pointer;
+      color: var(--text-muted); font-size: 13px; font-weight: 600;
+      padding: 8px 20px 0; align-items: center; gap: 4px;
+    }
+    .back-btn.visible { display: flex; }
+    .back-btn svg { width: 14px; height: 14px; }
+    .summary-row { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #fff; margin-bottom: 6px; }
     .summary-row:last-child { margin-bottom: 0; }
-    .summary-row .check-icon { width: 16px; height: 16px; flex-shrink: 0; color: #3a7a44; }
+    .summary-row .check-icon { width: 16px; height: 16px; flex-shrink: 0; color: var(--green-light); }
     .summary-row strong { font-weight: 700; }
 
     /* ─── CONTACT FORM ─── */
@@ -385,6 +392,11 @@
           <span class="prog-label" id="lbl5">Your Info</span>
         </div>
       </div>
+
+      <button class="back-btn" id="backBtn" onclick="goBack()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Back
+      </button>
 
       <!-- Step 1 -->
       <div class="quiz-step active" id="step1">
@@ -855,11 +867,25 @@
       }, 320);
     }
 
+    let currentStep = 1;
+
     function goToStep(n) {
       document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
-      document.getElementById('step' + n).classList.add('active');
+      const step = document.getElementById('step' + n);
+      step.classList.add('active');
+      // Clear any highlighted selection on this step
+      step.querySelectorAll('.quiz-opt').forEach(b => b.classList.remove('selected'));
+      currentStep = n;
       updateProgress(n);
       document.getElementById('quizWrap').scrollIntoView({ behavior:'smooth', block:'start' });
+      // Show/hide back button
+      const backBtn = document.getElementById('backBtn');
+      if (n > 1 && n < 5) backBtn.classList.add('visible');
+      else backBtn.classList.remove('visible');
+    }
+
+    function goBack() {
+      if (currentStep > 1) goToStep(currentStep - 1);
     }
 
     function showStep(n) {
