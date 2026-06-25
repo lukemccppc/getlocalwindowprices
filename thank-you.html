@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | GetLocalWindowPrices.com</title>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <meta name="robots" content="noindex" />
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="ico-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="ico-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="ico-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="ico-dollar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+  </svg>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark: #122342;
+      --green-light: #DDF5A2;
+      --white: #FFFFFF;
+      --red: #E85624;
+      --text-dark: #1a1a1a;
+      --text-muted: #555;
+      --radius: 8px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      color: var(--text-dark);
+      background: var(--green-dark);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    svg.icon { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+
+    .site-header { background: var(--green-dark); padding: 10px 20px; text-align: center; }
+    .site-header .logo img { height: 44px; width: auto; display: block; margin: 0 auto; }
+    @media (min-width: 768px) { .site-header .logo img { height: 58px; } }
+
+    .ty-wrap {
+      background: var(--green-dark); color: var(--white);
+      text-align: center; padding: 56px 20px 64px;
+    }
+    .ty-check {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: var(--green-light); color: var(--green-dark);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 22px;
+    }
+    .ty-check svg { width: 36px; height: 36px; }
+    .ty-wrap h1 { font-size: clamp(26px, 6vw, 38px); font-weight: 800; margin-bottom: 12px; }
+    .ty-wrap p.sub { font-size: 16px; color: rgba(255,255,255,0.8); max-width: 480px; margin: 0 auto; }
+
+    .next-section { background: #f5f5f3; padding: 48px 20px; }
+    .next-inner { max-width: 640px; margin: 0 auto; }
+    .next-title { font-size: clamp(20px, 5vw, 26px); font-weight: 800; text-align: center; color: var(--green-dark); margin-bottom: 28px; }
+    .next-steps { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 600px) { .next-steps { grid-template-columns: 1fr 1fr 1fr; } }
+    .next-step { background: var(--white); border-radius: 12px; padding: 22px 18px; text-align: center; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+    .next-icon {
+      width: 48px; height: 48px; border-radius: 50%; background: var(--green-light); color: var(--green-dark);
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;
+    }
+    .next-icon svg { width: 22px; height: 22px; }
+    .next-step strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--green-dark); }
+    .next-step span { font-size: 13px; color: var(--text-muted); }
+
+    .ty-footer { background: var(--green-dark); color: rgba(255,255,255,0.6); text-align: center; padding: 24px 20px; font-size: 12px; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/img/logo.svg" alt="GetLocalWindowPrices.com" />
+    </div>
+  </header>
+
+  <section class="ty-wrap">
+    <div class="ty-check"><svg class="icon"><use href="#ico-check"/></svg></div>
+    <h1>You&rsquo;re All Set!</h1>
+    <p class="sub">Thanks for requesting local window pricing. A top-rated window company in your area will be in touch shortly with your free, no-obligation quote.</p>
+  </section>
+
+  <section class="next-section">
+    <div class="next-inner">
+      <h2 class="next-title">What Happens Next?</h2>
+      <div class="next-steps">
+        <div class="next-step">
+          <div class="next-icon"><svg class="icon"><use href="#ico-clock"/></svg></div>
+          <strong>Quick Response</strong>
+          <span>Expect a call or text within 24 hours.</span>
+        </div>
+        <div class="next-step">
+          <div class="next-icon"><svg class="icon"><use href="#ico-pin"/></svg></div>
+          <strong>Local Match</strong>
+          <span>We connect you with a contractor near you.</span>
+        </div>
+        <div class="next-step">
+          <div class="next-icon"><svg class="icon"><use href="#ico-dollar"/></svg></div>
+          <strong>Free Quote</strong>
+          <span>Review your price &mdash; no cost, no obligation.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ty-footer">
+    &copy; 2026 GetLocalWindowPrices.com. All rights reserved.
+  </footer>
+
+</body>
+</html>
